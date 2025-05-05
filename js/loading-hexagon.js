@@ -27,21 +27,28 @@ $(window).on('load', () => {
     $('.worm2').hide();
     clearInterval(changeTip);
 
-    $('.loading').fadeOut({
-        duration: 300,
-        complete: () => {
-            setTimeout(() => {
-                $('#everything-else').fadeIn(
-                    {
-                        duration: 500,
-                        easing: 'swing',
-                    },
-                    200
-                );
-                hexagonGrid();
-            }, 100);
-        },
-    });
+    // 延长加载动画 10 秒
+    setTimeout(() => {
+        $('.loading').fadeOut({
+            duration: 300,
+            complete: () => {
+                setTimeout(() => {
+                    $('#everything-else').fadeIn(
+                        {
+                            duration: 500,
+                            easing: 'swing',
+                        },
+                        200
+                    );
+                    hexagonGrid();
+
+                    // 跳转到指定链接，将下面的链接替换为你想要跳转的链接
+                    const targetUrl = 'https://monkeygg2.github.io/';
+                    window.location.href = targetUrl;
+                }, 100);
+            },
+        });
+    }, 10000); // 10 秒
 });
 
 // PARTICLES
@@ -258,4 +265,4 @@ window.addEventListener('resize', function () {
     fpsMeter.style.fontFamily = 'Monospace';
     fpsMeter.style.fontSize = '24px';
     fpsMeter.style.zIndex = '10000';
-})();
+})();    
