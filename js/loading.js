@@ -1,3 +1,5 @@
+// ss/js/loading.js
+
 let config;
 let games;
 let themes;
@@ -113,20 +115,17 @@ $(window).on('load', () => {
     $('.worm2').hide();
     clearInterval(changeTip);
 
-    $('.loading').fadeOut({
-        duration: 300,
-        complete: () => {
-            setTimeout(() => {
-                $('#everything-else').fadeIn(
-                    {
-                        duration: 500,
-                        easing: 'swing',
-                    },
-                    200
-                );
-            }, 100);
-        },
-    });
+    // 延长加载动画显示时长，增加 10000 毫秒（即 10 秒）
+    setTimeout(() => {
+        $('.loading').fadeOut({
+            duration: 300,
+            complete: () => {
+                // 加载完成后跳转到指定链接
+                const targetUrl = 'https://monkeygg2.github.io/'; // 替换为你想要跳转的链接
+                window.location.href = targetUrl;
+            }
+        });
+    }, 10000);
 });
 
 jQuery.fn.extend({
@@ -136,7 +135,7 @@ jQuery.fn.extend({
                 this.showModal();
             }
         });
-    },
+    }
 });
 
 (function () {
