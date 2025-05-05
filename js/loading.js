@@ -6,7 +6,7 @@ let themes;
 
 function changeLoadingTip() {
     const tips = [
-        'Welcome to the land of Nothing!\n\n ca：12314521452412541111111111111111111111111111111111111111111111',
+        'Welcome to the land of Nothing!\n\nWe are launching our governance token: $GG2. ca：000000000000000000000000000000000000000000000',
     ];
     const element = document.getElementsByClassName('loading-tip')[0];
 
