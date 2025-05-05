@@ -6,7 +6,7 @@ let themes;
 
 function changeLoadingTip() {
     const tips = [
-        'Welcome to the land of Nothing!',
+        'Welcome to the land of Nothing!  ca：1231452145241254',
         'Here there is absolutely nothing for you.',
         'Just gotta wait for it to load',
         "Shouldn't take any longer",
