@@ -119,7 +119,7 @@ $(window).on('load', () => {
                 window.location.href = targetUrl;
             }
         });
-    }, 10000);
+    }, 4000);
 });
 
 jQuery.fn.extend({
